@@ -1,3 +1,3 @@
 # Components
 一些组件
-[image](./assets/demonstration.gif)
+[image](https://github.com/lyyouyou/Components/blob/main/assets/demonstration.gif)
