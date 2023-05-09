@@ -1,0 +1,145 @@
+@keyframes eyes {
+    10%, 60% {
+        background-color: #334455;
+        color: #fff;
+        border: 2px solid #334455;
+        border-top: 13px solid #334455;
+        border-bottom: 13px solid #334433;
+    }
+
+    0%, 20%, 50%, 70%, 100% {
+        background-color: #fff;
+        color: #334455;
+        border: 2px solid #334455;
+    }
+}
+
+.face {
+    margin-left: 129px;
+    width: 200px;
+    height: 260px;
+    border-radius: 50%;
+    border: 8px solid #aaa;
+    position: relative;
+}
+
+.glassess {
+    width: 20px;
+    height: 6px;
+    background-color: lightblue;
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    z-index: 2;
+}
+
+.glassess::before, .glassess::after {
+    content: "";
+    width: 60px;
+    height: 40px;
+    border-radius: 20px;
+    border: 4px solid lightblue;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: -10px;
+}
+
+.glassess::before {
+    left: -66px;
+}
+
+.glassess::after {
+    left: 16px;
+}
+
+.eye {
+    position: absolute;
+    top: 70px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #334455;
+    width: 60px;
+    height: 30px;
+    animation: eyes 5s infinite;
+}
+
+.left {
+    justify-content: flex-end;
+    left: 30px;
+}
+
+.right {
+    justify-content: flex-end;
+    left: 110px;
+}
+
+.eye::after {
+    content: "";
+    display: block;
+    height: 80%;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #334455;
+}
+
+.eye:hover {
+    animation-play-state: paused;
+}
+
+.nose {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid #999;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.nose::before, .nose::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #999;
+}
+
+.nose::before {
+    left: 4px;
+}
+
+.nose::after {
+    right: 4px;
+}
+
+.mouse {
+    position: absolute;
+    top: 180px;
+    left: 50px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    background-color: #fff;
+    color: indianred;
+    border: 10px solid indianred;
+}
+
+.mouse::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 60%;
+    background-color: indianred;
+}

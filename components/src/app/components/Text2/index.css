@@ -1,0 +1,52 @@
+@keyframes runCover {
+    0% { left: 0; top: 0; }
+    35% { left: 500px; top: 0 }
+    45% { left: 500px; top: 30px; }
+    90% { left: 0; top: 30px; }
+    100% { left: 0; top: 0; }
+}
+
+@keyframes runText {
+    0% { left: 0; top: 0; }
+    35% { left: -500px; top: 0 }
+    45% { left: -500px; top: -30px; }
+    90% { left: 0; top: -30px; }
+    100% { left: 0; top: 0; }
+}
+
+.box2 {
+    position: relative;
+    margin-left: 65px;
+    font-size: 60px;
+    width: 500px;
+    height: 64px;
+}
+
+.cover2, .text2 {
+    position: absolute;
+    height: 100%;
+    line-height: 1;
+}
+
+.cover2 {
+    color: lightblue;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 15%;
+    background-color: #eee;
+    animation: runCover 10s infinite linear;
+}
+
+.cover2::before {
+    content: "Nice to meet you!";
+    position: absolute;
+    width: 500px;
+    animation: runText 10s infinite linear;
+}
+
+.text2 {
+    color: indianred;
+    z-index: 2;
+}
